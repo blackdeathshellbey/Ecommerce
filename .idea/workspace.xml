@@ -4,38 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f79e882-2720-4694-9178-a2c5f05ae451" name="Changes" comment="Project Creation">
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/Bucket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/Consolidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/ProductData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/ShopInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/WorkerLambda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/WorkerOrganizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store6.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store9.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store6.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store9.csv" afterDir="false" />
+    <list default="true" id="2f79e882-2720-4694-9178-a2c5f05ae451" name="Changes" comment="Classes Defined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Bucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/Consolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Consolidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/WorkerLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/WorkerLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/WorkerOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/WorkerOrganizer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +26,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -113,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704364683680</updated>
       <workItem from="1704364684991" duration="222000" />
-      <workItem from="1704364915062" duration="2460000" />
+      <workItem from="1704364915062" duration="8309000" />
     </task>
     <task id="LOCAL-00001" summary="Project Creation">
       <created>1704364838146</created>
@@ -129,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1704364853112</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Classes Defined">
+      <created>1704368492084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704368492084</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classes Defined">
+      <created>1704368552153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704368552153</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Creation" />
+    <MESSAGE value="Classes Defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classes Defined" />
   </component>
 </project>
