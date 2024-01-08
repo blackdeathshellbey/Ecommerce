@@ -1,7 +1,9 @@
 # Cloud Computing
 
 Authors : Mohsen HADAVI, Erfan ENFERAD, Said GHATTAS
-Demostration vidéo : http://
+
+Demostration video : http://
+
 Project made with JAVA
 
 	Java version: 17
