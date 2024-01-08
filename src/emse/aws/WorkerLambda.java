@@ -41,6 +41,7 @@ public class WorkerLambda implements RequestHandler <SNSEvent, Object> {
             int count = 0;
             String line = "";
 
+            // by store
             try (S3Object object = amazonClient.getObject(bucketName, fileKey);
                  InputStreamReader streamReader = new InputStreamReader(object.getObjectContent(),
                          StandardCharsets.UTF_8);
@@ -60,6 +61,7 @@ public class WorkerLambda implements RequestHandler <SNSEvent, Object> {
                 context.getLogger().log("IOException: " + e.getMessage());
             }
 
+            // by product
             try (S3Object object = amazonClient.getObject(bucketName, fileKey);
                  InputStreamReader streamReader = new InputStreamReader(object.getObjectContent(),
                          StandardCharsets.UTF_8);

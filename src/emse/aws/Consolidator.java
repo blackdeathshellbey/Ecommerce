@@ -19,7 +19,8 @@ public class Consolidator {
         Date executionDate = new Date();
         System.out.println(executionDate);
         S3Client s3 = S3Client.builder().region(ShopInventory.region).build();
-        String date = args[0].toString();
+//        String date = args[0].toString();
+        String date = "01-10-2022";
         Double[] Profit = new Double[2];
         String[] Store = new String[2];
         ArrayList<ProductData> products = new ArrayList<ProductData>();

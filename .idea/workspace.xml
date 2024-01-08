@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f79e882-2720-4694-9178-a2c5f05ae451" name="Changes" comment="Project Creation">
-      <change afterPath="$PROJECT_DIR$/src/emse/aws/WorkerProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/emse/aws/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/ShopInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/ShopInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/WorkerOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/WorkerOrganizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store10.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/01-10-2022-store9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store10.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emse/aws/sales_data/02-10-2022-store9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/Consolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/Consolidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emse/aws/WorkerLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/emse/aws/WorkerLambda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +56,22 @@
       <recent name="C:\Users\Nude\IdeaProjects\Ecommerce\src\emse\aws" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WorkerOrganizer">
+  <component name="RunManager" selected="Application.Consolidator">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="emse.aws.Client" />
+      <module name="Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="emse.aws.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Consolidator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="emse.aws.Consolidator" />
       <module name="Ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -107,8 +98,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WorkerOrganizer" />
+        <item itemvalue="Application.Consolidator" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.WorkerOrganizer" />
       </list>
     </recent_temporary>
   </component>
