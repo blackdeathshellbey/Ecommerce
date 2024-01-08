@@ -13,46 +13,30 @@ import java.nio.file.Path;
 import static emse.aws.Parser.deleteFile;
 
 public class Bucket {
-    public static boolean bucketExists(S3Client client, String bucketName) {
-        HeadBucketRequest headBucketRequest = HeadBucketRequest.builder().bucket(bucketName).build();
-        try {
-            client.headBucket(headBucketRequest);
-            return true;
-        } catch (NoSuchBucketException e) {
-            return false;
-        }
-    }
 
-    public static boolean makeBucket(String bucketName, S3Client client, Region region) throws Exception {
-        CreateBucketRequest createBucketRequest = CreateBucketRequest
-                .builder()
-                .bucket(bucketName)
-                .createBucketConfiguration(CreateBucketConfiguration.builder()
-                        .locationConstraint(region.id())
-                        .build())
-                .build();
-        client.createBucket(createBucketRequest);
-        System.out.println("Created bucket:" + bucketName);
-        return true;
-    }
-
-    public static boolean bucketInventory(S3Client client, String bucketName, String bucketKey, Path filePath) throws Exception {
+    public static boolean uploadBucket(S3Client client, String bucketName, String bucketKey, Path filePath) throws Exception {
         client.putObject(PutObjectRequest.builder().bucket(bucketName).key(bucketKey)
                 .build(), filePath);
         return true;
     }
 
     ////
-    public static void createBucket(S3Client client, String bucketName) throws S3Exception {
+    public static void createBucket(S3Client client, String bucketName) {
+        try{
+            S3Waiter s3Waiter = client.waiter();
+            CreateBucketRequest bucketRequest = CreateBucketRequest.builder().bucket(bucketName).build();
 
-        S3Waiter s3Waiter = client.waiter();
-        CreateBucketRequest bucketRequest = CreateBucketRequest.builder().bucket(bucketName).build();
+            client.createBucket(bucketRequest);
+            HeadBucketRequest bucketRequestWait = HeadBucketRequest.builder().bucket(bucketName).build();
 
-        client.createBucket(bucketRequest);
-        HeadBucketRequest bucketRequestWait = HeadBucketRequest.builder().bucket(bucketName).build();
+            WaiterResponse<HeadBucketResponse> waiterResponse = s3Waiter.waitUntilBucketExists(bucketRequestWait);
+            waiterResponse.matched().response().ifPresent(System.out::println);
+            System.out.println("ready to use " + bucketName);
+        }catch (S3Exception e) {
+            System.err.println(e.awsErrorDetails().errorMessage());
+            System.exit(1);
+        }
 
-        WaiterResponse<HeadBucketResponse> waiterResponse = s3Waiter.waitUntilBucketExists(bucketRequestWait);
-        waiterResponse.matched().response().ifPresent(System.out::println);
     }
 
     static boolean bucketCheck(S3Client client, String bucketName) {

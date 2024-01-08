@@ -15,40 +15,36 @@ import java.nio.file.Path;
 public class Client {
 
     public static void main(String[] args) {
-        String storeName = args[0];
-        String date = args[1];
+        String storeName = "store1";
+        String date = "01-10-2022";
+        String lambdaOrJavaApp= "Java application";
+//        String lambdaOrJavaApp= "lambda";
         String fileName = date + "-" + storeName + ".csv";
 
         File file = new File(ShopInventory.salesData + fileName);
 
         S3Client s3 = S3Client.builder().region(ShopInventory.region).build();
-
         try {
-            boolean bucketExists = Bucket.bucketExists(s3, ShopInventory.bucket);
-            System.out.println("Bucket Exists:" + bucketExists);
+            boolean bucketExists = Bucket.bucketCheck(s3, ShopInventory.bucket);
+            System.out.println("Bucket Exists: " + bucketExists);
+            System.exit(1);
 
             if (!bucketExists) {
-                boolean bucketCreated = Bucket.makeBucket(ShopInventory.bucket, s3,
-                        ShopInventory.region);
-
-                if (bucketCreated) {
-                    System.out.println("Bucket:" + ShopInventory.bucket + " created");
-                    bucketExists = true;
-                } else {
-                    System.out.println("Bucket:" + ShopInventory.bucket + " could not be created");
-                }
+                Bucket.createBucket(s3, ShopInventory.bucket);
+                System.out.println("Bucket:" + ShopInventory.bucket + " created");
+                bucketExists = true;
             }
 
             if (bucketExists) {
                 Path filePath = file.toPath();
 
-                boolean fileUploaded = Bucket.bucketInventory(s3, ShopInventory.bucket, fileName,
+                boolean fileUploaded = Bucket.uploadBucket(s3, ShopInventory.bucket, fileName,
                         filePath);
 
                 if (fileUploaded) {
                     System.out.println("file uploaded");
 
-                    if (args[2].toString().equals("lambda")) {
+                    if (lambdaOrJavaApp.equals("lambda")) {
                         System.out.println("Lambda will be used");
                         try {
                             SnsClient snsClient = SnsClient.builder().region(ShopInventory.region).build();
@@ -62,7 +58,7 @@ public class Client {
                             System.err.println(e.awsErrorDetails().errorCode());
                             System.exit(1);
                         }
-                    } else if (args[2].toString().equals("ec2")) {
+                    } else if (lambdaOrJavaApp.equals("Java application")) {
                         System.out.println("EC2 will be used");
                         SqsClient sqsClient = SqsClient.builder().region(ShopInventory.region).build();
                         SendMessageRequest sendRequest = SendMessageRequest.builder().queueUrl(ShopInventory.sqsURL)
@@ -75,10 +71,8 @@ public class Client {
                     System.out.println("file upload failed");
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
-
         }
     }
 }

@@ -170,7 +170,7 @@ public class Parser {
             context.getLogger().log("Writing done for summary file:" + fileName );
             Path filePath = file.toPath();
             context.getLogger().log("Path:" + filePath );
-            boolean bucketUploaded = Bucket.bucketInventory(s3, ShopInventory.bucket, initialFileName, filePath);
+            boolean bucketUploaded = Bucket.uploadBucket(s3, ShopInventory.bucket, initialFileName, filePath);
 
             if(bucketUploaded) {
                 System.out.println("file uploaded");
