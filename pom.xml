@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>emse.aws.Consolidator</mainClass>
+                            <mainClass>emse.aws.WorkerOrganizer</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

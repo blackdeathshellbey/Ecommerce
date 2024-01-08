@@ -125,7 +125,7 @@ public class Parser {
         File file = new File(fileName);
         Path filePath = file.toPath();
 
-        System.out.println("new file" + filePath);
+        System.out.println("new file: " + filePath);
 
         return true;
     }

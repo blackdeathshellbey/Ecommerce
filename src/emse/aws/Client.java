@@ -27,7 +27,6 @@ public class Client {
         try {
             boolean bucketExists = Bucket.bucketCheck(s3, ShopInventory.bucket);
             System.out.println("Bucket Exists: " + bucketExists);
-            System.exit(1);
 
             if (!bucketExists) {
                 Bucket.createBucket(s3, ShopInventory.bucket);
